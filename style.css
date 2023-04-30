@@ -7,16 +7,23 @@
 .button {
     display: flex;
     align-items: center;
-    justify-content: center;
     width: 100%;
     background: #000;
     position: relative;
-    z-index: 2;
+    z-index: 1;
     
 }
 
-.button--with-icon {
-    padding: 5px 0px 5px 0px;
+.button--content-center {
+    justify-content: center;
+}
+
+.button--content-right {
+    justify-content: right;
+}
+
+.button--content-left {
+    justify-content: left;
 }
 
 .button__input{
@@ -25,6 +32,7 @@
     height: 100%;
     opacity: 0;
     cursor: pointer;
+    z-index: 3;
 }
 
 .button__text {
@@ -32,8 +40,15 @@
     font-size: 20px;
     line-height: 40px;
     text-decoration: none;
+    padding: 5px;
+    position: relative;
+    z-index: 2;
 }
 
 .button__icon {
     width: 40px;
+    padding: 5px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
 }
